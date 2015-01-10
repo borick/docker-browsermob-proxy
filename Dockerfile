@@ -1,5 +1,10 @@
+# Browser Mob Proxy
 
-FROM ubuntu:14.04
+FROM phusion/baseimage:0.9.15
+MAINTAINER Márton Juhász <m@juhaszmarton.hu>
+
+# Use baseimage-docker's init system.
+CMD ["/sbin/my_init"]
 
 ENV DEBIAN_FRONTEND noninteractive
 
@@ -11,8 +16,7 @@ RUN curl -SL "https://s3-us-west-1.amazonaws.com/lightbody-bmp/browsermob-proxy-
     && unzip -q /browsermob-proxy.zip \
     && rm -f /browsermob-proxy.zip
 
-COPY start.sh /
-RUN chmod +x /start.sh
+RUN mkdir /etc/service/bmp
+ADD start-bmp.sh /etc/service/bmp/run
 
 EXPOSE 9090 9091
-CMD ["/start.sh"]

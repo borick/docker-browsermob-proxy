@@ -1,11 +1,12 @@
-BrowserMob Proxy in Docker
-==========================
+# docker browsermob-proxy
 
-Provide a simple Docker image to run a single BrowserMob-Proxy listener.
+By default runs BrowserMob-Proxy on port 9090 and opens ports in a range 9090-9191
 
-By default, it will load BrowserMob-Proxy on port 9090, and start a proxy listener on port 9091.
+Expose 100 ports for proxy listeners.
 
-Usage
------
+Reclaim port with ttl after 30 minutes
 
-    $ docker run -p 9090:9090 -p 9091:9091 shopigniter/browsermob-proxy
+
+## Usage
+
+    $ docker run -p 9090-9191:9090-9191 rubytester/browsermob-proxy

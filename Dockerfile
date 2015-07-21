@@ -1,7 +1,6 @@
 # Browser Mob Proxy
 
 FROM phusion/baseimage:0.9.15
-MAINTAINER Márton Juhász <m@juhaszmarton.hu>
 
 # Use baseimage-docker's init system.
 CMD ["/sbin/my_init"]
@@ -19,4 +18,5 @@ RUN curl -SL "https://s3-us-west-1.amazonaws.com/lightbody-bmp/browsermob-proxy-
 RUN mkdir /etc/service/bmp
 ADD start-bmp.sh /etc/service/bmp/run
 
-EXPOSE 9090 9091
+# 100 ports for listeners
+EXPOSE 9090-9191

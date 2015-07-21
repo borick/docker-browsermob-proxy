@@ -1,4 +1,4 @@
-# docker-browsermob-proxy
+# Docker browsermob-proxy
 
 - [browsermob-proxy-2.1.0-beta-2](https://github.com/lightbody/browsermob-proxy/releases/tag/browsermob-proxy-2.1.0-beta-2) on port 9090 using littleproxy.
 - expose 100 ports for proxy listeners in range 9091-9191
@@ -6,4 +6,4 @@
 
 ## Usage
 
-    $ docker run -p 9090-9191:9090-9191 rubytester/docker-browsermob-proxy
+    $ docker run -p 9090-9191:9090-9191 rubytester/browsermob-proxy

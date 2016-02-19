@@ -11,7 +11,7 @@ RUN apt-get update \
     && apt-get -y install curl zip openjdk-7-jre-headless \
     && apt-get clean && rm -rf /var/lib/apt/lists/*
 
-RUN curl -SL "https://github.com/lightbody/browsermob-proxy/releases/download/browsermob-proxy-2.1.0-beta-2/browsermob-proxy-2.1.0-beta-2-bin.zip" -o "/browsermob-proxy.zip" \
+RUN curl -SL "https://github.com/lightbody/browsermob-proxy/releases/download/browsermob-proxy-2.1.0-beta-4/browsermob-proxy-2.1.0-beta-4-bin.zip" -o "/browsermob-proxy.zip" \
     && unzip -q /browsermob-proxy.zip \
     && rm -f /browsermob-proxy.zip
 

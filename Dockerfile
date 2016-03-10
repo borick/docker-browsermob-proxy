@@ -11,7 +11,7 @@ RUN apt-get update \
     && apt-get -y install curl zip openjdk-7-jre-headless \
     && apt-get clean && rm -rf /var/lib/apt/lists/*
 
-ADD browsermob-dist-2.1.0-beta-5-SNAPSHOT.jar /
+ADD browsermob-dist-2.1.0-beta-4.jar /
 
 RUN mkdir /etc/service/browsermob-proxy
 ADD run-browsermob-proxy.sh /etc/service/browsermob-proxy/run

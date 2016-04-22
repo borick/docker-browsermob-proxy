@@ -17,4 +17,4 @@ RUN mkdir /etc/service/browsermob-proxy
 ADD run-browsermob-proxy.sh /etc/service/browsermob-proxy/run
 
 # 100 ports for listeners
-EXPOSE 9090-9391
+EXPOSE 9091-9391
